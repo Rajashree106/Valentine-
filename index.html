@@ -80,6 +80,20 @@ button {
   from { transform: translateY(100vh); opacity: 1; }
   to { transform: translateY(-10vh); opacity: 0; }
 }
+
+  /* Sticker floating */
+.sticker {
+  width: 80px;       /* adjust size */
+  margin-top: 10px;
+  position: relative;
+  animation: floatSticker 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatSticker {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
 </style>
 </head>
 
@@ -110,7 +124,9 @@ button {
 
 <!-- POPUP 3 -->
 <div class="card hidden" id="step3">
-  <h1><img src="bear.png" alt="cute bear" class="sticker"></h1>
+  <h1>
+    <img src="bear.png" alt="cute bear" class="sticker">
+  </h1>
   <p>
     Congratulations! 🎉<br><br>
     With this clumsy, chulbulii,  
@@ -147,3 +163,4 @@ function burstHearts() {
 </body>
 
 </html>
+
